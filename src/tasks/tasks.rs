@@ -3,6 +3,7 @@ use serde::{Deserialize, Serialize};
 
 #[derive(Debug, Serialize, Deserialize)]
 pub struct Task {
+    pub id: i32,
     pub user_id: i32,
     pub task_name: String,
     pub repeat: bool,
@@ -24,4 +25,13 @@ impl Task {
             completed_at: None,
         }
     }
+
+    // let task = Task::new(1, 123, "Buy groceries".to_string(), false, Local::today().and_hms(18, 0, 0));
+
+    pub fn complete(&mut self) {
+        self.completed_at = Some(Local::now());
+    }
+
+    // task.complete();
+
 }

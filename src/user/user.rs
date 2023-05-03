@@ -20,4 +20,13 @@ impl User {
             postal_code,
         }
     }
+
+    // let user = User::new(
+    //     "John".to_string(),
+    //     "Doe".to_string(),
+    //     "john.doe@example.com".to_string(),
+    //     NaiveDate::from_ymd(1980, 1, 1),
+    //     PostalCode::new("12345".to_string()).unwrap(),
+    // );
+    
 }
